@@ -1,0 +1,59 @@
+---
+title: Rank SBT
+description: Your Pro tier, minted as a non-transferable Solana token
+---
+
+Your Pro Mode tier is not just a label on your profile — it's a Soulbound Token (SBT) minted to your Solana wallet. This makes your rank independently verifiable by anyone, anywhere, without having to trust Piker's database.
+
+## What is a Soulbound Token
+
+A Soulbound Token is a non-transferable NFT. It lives in your wallet but cannot be sold, swapped, or sent to another address. This property is critical for rank — a tier you earned must represent your performance, not something you bought from someone else.
+
+<Info>
+  SBT ownership is cryptographically tied to the wallet you connected when your tier was assigned. Moving to a new wallet means re-linking your Piker account and re-minting your current tier.
+</Info>
+
+## When your SBT is minted
+
+<Steps>
+  <Step title="Reach a new tier">
+    Your Piker Score crosses into a new tier threshold — Bronze to Silver, Silver to Gold, and so on.
+  </Step>
+  <Step title="Automatic mint">
+    Piker's smart contract mints a new SBT representing your current tier and burns the previous one. No action required from you — it happens in the background.
+  </Step>
+  <Step title="Wallet receives it">
+    The new SBT appears in your Phantom, Backpack, or Solflare wallet. The metadata records your tier, your Piker Score at mint, and the timestamp.
+  </Step>
+  <Step title="Profile updates">
+    Your public Piker profile reflects the new tier frame and adds a "Verified on Solana" link that points directly to the mint transaction on Solscan.
+  </Step>
+</Steps>
+
+## What the SBT contains
+
+| Field | Value |
+|-------|-------|
+| Tier | Bronze, Silver, Gold, Diamond, or Elite |
+| Piker Score | Your score at the time of mint |
+| Username | Your Piker username |
+| Mint timestamp | Block time of the mint transaction |
+| Previous tier | The tier this SBT replaced, if any |
+
+## Tier drops and re-minting
+
+If your Piker Score drops enough to move you into a lower tier, the old SBT is burned and a new one at the lower tier is minted. This keeps your wallet's token always in sync with your live rank.
+
+<Warning>
+  Because tier changes trigger on-chain mints, your full tier history is reconstructable from Solscan. Backers can see every upgrade and downgrade, not just your current standing.
+</Warning>
+
+## Verifying an SBT
+
+Anyone can verify a trader's rank by:
+
+1. Opening the trader's Piker profile
+2. Tapping the "Verified on Solana" link next to their tier badge
+3. Inspecting the SBT metadata on Solscan
+
+If the on-chain record doesn't match the profile, the profile is not legitimate.

@@ -1,0 +1,66 @@
+---
+title: Fund Me Vaults
+description: How backer capital is held and distributed on Solana
+---
+
+A Fund Me vault is a Solana smart contract that holds backer USDC and distributes profits according to the 80/15/5 split. Every funded trader on Piker has their own vault. Every backer's principal sits inside that vault until they withdraw.
+
+## What a vault does
+
+<CardGroup cols={2}>
+  <Card title="Holds principal" icon="vault">
+    Backer USDC enters the vault when deployed and stays there. The trader cannot withdraw principal — only trade with it.
+  </Card>
+  <Card title="Routes profits" icon="arrows-split-up-and-left">
+    At the end of each weekly cycle, profits are split automatically — 80% to the trader's wallet, 15% proportionally to backers, 5% to the platform.
+  </Card>
+  <Card title="Tracks positions" icon="chart-pie">
+    The vault records each backer's share of principal. If a vault is 40% funded by one backer, they receive 40% of the backer share of profits.
+  </Card>
+  <Card title="Enforces limits" icon="shield-halved">
+    Drawdown limits, withdrawal windows, and the backing cap are all enforced in code — not policy.
+  </Card>
+</CardGroup>
+
+## Weekly distribution cycle
+
+<Steps>
+  <Step title="Monday 00:00 UTC — cycle starts">
+    Any new backer deposits made during the past week are activated. The trader's realized P&L from the previous week is distributed.
+  </Step>
+  <Step title="Through the week — trading">
+    The trader uses vault capital in Pro Mode. All positions and realized P&L are tracked on-chain against the vault's accounting.
+  </Step>
+  <Step title="Sunday 23:59 UTC — cycle ends">
+    Open positions are marked to market for the end-of-cycle snapshot. Realized profits are calculated.
+  </Step>
+  <Step title="Automatic distribution">
+    The smart contract splits realized profits 80/15/5. Trader and backer shares land in their respective wallets. The cycle closes and a new one begins.
+  </Step>
+</Steps>
+
+## Backer protections
+
+The vault contract enforces several protections for backer capital:
+
+| Protection | How it works |
+|-----------|-------------|
+| **Principal segregation** | Backer principal is accounted for separately from profits. The trader cannot touch principal balances. |
+| **Drawdown circuit breaker** | If vault equity drops below a defined threshold, new trades are blocked until recovery or manual review. |
+| **Withdrawal window** | Backers can withdraw at the end of each weekly cycle. Principal plus any accrued profit share returns to the backer's wallet. |
+| **Cap enforcement** | The trader's backing cap is checked on every deposit. Deposits that would exceed the cap are rejected before execution. |
+
+<Warning>
+  Losses up to the circuit breaker threshold are absorbed by backer principal. The circuit breaker exists to prevent total loss of principal, not to guarantee it. Never back an amount you are not willing to lose entirely.
+</Warning>
+
+## Verifying a vault
+
+Every Fund Me card links directly to the vault's address on Solscan. From there you can see:
+
+- Total USDC currently deployed in the vault
+- All deposit and withdrawal transactions
+- All distribution events with exact 80/15/5 math
+- The list of active backer accounts and their shares
+
+The contract source is published and verifiable. The rules that govern your capital are readable by anyone.

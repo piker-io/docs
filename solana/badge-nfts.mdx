@@ -1,0 +1,61 @@
+---
+title: Badge NFTs
+description: Your achievements, minted as compressed NFTs on Solana
+---
+
+Every qualifying badge you earn on Piker — Rookie and Pro — is minted as a compressed NFT (cNFT) on Solana. The NFT is yours. It lives in your wallet. It's permanent.
+
+## Why compressed NFTs
+
+Compressed NFTs use Solana's state compression to bring mint costs down to fractions of a cent. This is what makes issuing thousands of badges across the platform economically viable — a traditional NFT mint would be prohibitively expensive at scale.
+
+<Info>
+  cNFTs are fully compatible with standard Solana NFT tooling. You can view them in Phantom, Backpack, and Solflare, list them on marketplaces (though Piker badges are non-transferable by design), and verify them on Solscan.
+</Info>
+
+## How minting works
+
+<Steps>
+  <Step title="Earn the badge">
+    You hit the trigger condition for a badge — a 7-day streak, a top-10 daily finish, a Diamond tier promotion.
+  </Step>
+  <Step title="Instant mint">
+    Piker's Solana program mints the cNFT to your connected wallet in the same transaction that awards the badge. You don't sign anything — gas is paid by Piker.
+  </Step>
+  <Step title="Appears on profile and wallet">
+    The badge appears in full color on your public profile within seconds. The cNFT shows up in your wallet's NFT tab on its next refresh.
+  </Step>
+</Steps>
+
+## What each badge NFT contains
+
+| Field | Description |
+|-------|-------------|
+| Badge name | The display name, e.g. "Diamond Hands" |
+| Badge tier | Rookie or Pro |
+| Trigger event | The specific action that earned the badge |
+| Earned at | Block time of the mint |
+| Piker username | Your username at the time of mint |
+| Image | The badge artwork |
+
+## Which badges are on-chain
+
+<AccordionGroup>
+  <Accordion title="All Pro badges">
+    Every Pro Mode badge — tier promotions, Piker Score milestones, Fund Me achievements — is minted as a cNFT. See the [Milestones page](/pro/milestones) for the full list.
+  </Accordion>
+  <Accordion title="Rare Rookie badges">
+    The hardest Rookie badges — Voltage (7-day streak), Diamond Hands (30-day streak), Day King (daily #1 finish), No Mercy (100%+ daily P&L), and Resilient (comeback after 7 loss days) — are minted on-chain.
+  </Accordion>
+  <Accordion title="Common Rookie badges">
+    Everyday Rookie badges like First Blood and On Fire appear on your profile but are not minted on-chain. The bar for a permanent on-chain record is intentionally high — it makes the minted ones more meaningful.
+  </Accordion>
+</AccordionGroup>
+
+## Verifying a badge
+
+Every on-chain badge has a "Verify" link next to it on the owner's profile. Tapping it opens Solscan with the cNFT's mint address. The metadata, owner, and mint timestamp are all public record.
+
+<Tip>
+  If you care about on-chain provenance for your achievements, connect your Solana wallet before you start trading. Badges earned before wallet connection are recorded on your profile but cannot be retroactively minted.
+</Tip>

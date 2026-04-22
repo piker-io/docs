@@ -1,0 +1,31 @@
+---
+title: Supported Pairs
+description: All 20 trading pairs and their leverage limits
+---
+
+Piker V0 launches with 20 crypto perpetual futures pairs. Leverage caps are set by tier based on asset volatility.
+
+## Pair tiers
+
+| Tier | Pairs | Max Leverage | Maintenance Margin |
+|------|-------|-------------|-------------------|
+| **Tier 1 — Majors** | BTC/USDT, ETH/USDT | 20x | 0.5% |
+| **Tier 2 — Large Caps** | SOL/USDT, BNB/USDT, XRP/USDT, DOGE/USDT, ADA/USDT, AVAX/USDT | 15x | 1.0% |
+| **Tier 3 — Mid Caps** | LINK/USDT, MATIC/USDT, DOT/USDT, UNI/USDT, ARB/USDT, OP/USDT | 10x | 1.0% |
+| **Tier 4 — Volatility** | PEPE/USDT, WIF/USDT, BONK/USDT, SUI/USDT, SEI/USDT, TIA/USDT | 5x | 1.0% |
+
+## Price feed architecture
+
+All prices are sourced in real time from three exchanges and aggregated into a single composite price:
+
+- Binance WebSocket
+- Bybit WebSocket
+- OKX WebSocket
+
+The **median price** across all three feeds is used for all order executions. This prevents any single exchange's price anomaly from affecting the simulation and ensures fair execution for all traders.
+
+Price updates are pushed to all connected clients with sub-200ms latency. All price snapshots are logged with timestamps for audit and dispute resolution.
+
+<Info>
+  Slippage is simulated for large orders based on real order book depth. A position that would move the market on a real exchange will experience proportional simulated slippage on Piker.
+</Info>

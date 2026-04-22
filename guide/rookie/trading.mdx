@@ -1,0 +1,60 @@
+---
+title: Trading in Rookie Mode
+description: Chart, order book, order types, and position management
+---
+
+The Rookie trading interface is a full-featured perpetual futures simulator. Everything you see is real — real prices from Binance and Bybit, real order book depth, real funding rates. The only thing that's virtual is the capital.
+
+## The trading interface
+
+<AccordionGroup>
+  <Accordion title="Pair selector">
+    Scroll through all 20 supported pairs at the top of the trade view. Each pair shows the current 24h price change. Tap any pair to load its chart and order book instantly.
+  </Accordion>
+  <Accordion title="Price chart">
+    Powered by TradingView. Supports 1m, 5m, 15m, 1h, 4h, and 1D timeframes. All standard indicators available. The chart shows a faint **ROOKIE** watermark — this appears on any screenshot you take.
+  </Accordion>
+  <Accordion title="Order book">
+    Live asks (red) and bids (green) with real depth data aggregated from Binance, Bybit, and OKX. The spread is shown between the two sides. Quantity bars behind the prices show relative depth.
+  </Accordion>
+  <Accordion title="Order entry">
+    Long or short. Market, limit, or stop order. Size in USDT (constrained to your available capital). Leverage slider up to the pair's tier cap. Take profit and stop loss fields. One tap to place.
+  </Accordion>
+  <Accordion title="Open positions">
+    All open positions listed at the bottom with live P&L ticking in real time. Entry price, current price, liquidation price, and a close button per position.
+  </Accordion>
+</AccordionGroup>
+
+## Order types
+
+| Type | How it works |
+|------|-------------|
+| **Market** | Executes immediately at the best available price |
+| **Limit** | Executes when price reaches your specified level |
+| **Stop Loss** | Closes your position automatically if price moves against you |
+| **Take Profit** | Closes your position automatically when profit target is hit |
+| **Trailing Stop** | A dynamic stop loss that follows price as it moves in your favour |
+
+## Leverage by pair tier
+
+<Warning>
+  Leverage amplifies both gains and losses. A 10x leveraged position loses 10% of its margin for every 1% move against you. Use leverage carefully, especially on volatile pairs.
+</Warning>
+
+| Tier | Pairs | Max Leverage |
+|------|-------|-------------|
+| Majors | BTC/USDT, ETH/USDT | 20x |
+| Large Caps | SOL, BNB, XRP, DOGE, ADA, AVAX | 15x |
+| Mid Caps | LINK, MATIC, DOT, UNI, ARB, OP | 10x |
+| Volatility | PEPE, WIF, BONK, SUI, SEI, TIA | 5x |
+
+## Simulated trading costs
+
+To keep the simulation realistic, Piker applies simulated fees and slippage:
+
+- Taker fee: 0.06% per trade
+- Maker fee: 0.02% per trade
+- Slippage: simulated based on real order book depth for large positions
+- Funding rate: simulated from real Binance/Bybit funding rates
+
+These costs come out of your $100 capital and affect your daily P&L.

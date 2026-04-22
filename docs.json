@@ -1,68 +1,91 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+  "name": "Piker",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#A0A0C8",
+    "light": "#C8A840",
+    "dark": "#A0A0C8"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "User Guide",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "guide/introduction",
+              "guide/quickstart",
+              "guide/two-modes"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Rookie Mode",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "guide/rookie/overview",
+              "guide/rookie/daily-capital",
+              "guide/rookie/trading",
+              "guide/rookie/leaderboard",
+              "guide/rookie/streaks",
+              "guide/rookie/badges"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Reference",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "reference/pairs",
+              "reference/order-types",
+              "reference/faq"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Pro Mode",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Pro Mode",
             "pages": [
-              "api-reference/introduction"
+              "pro/overview",
+              "pro/piker-score",
+              "pro/tiers",
+              "pro/trading",
+              "pro/leaderboard",
+              "pro/milestones"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Fund Me",
+        "groups": [
           {
-            "group": "Endpoint examples",
+            "group": "Fund Me",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "fundme/overview",
+              "fundme/for-traders",
+              "fundme/for-backers",
+              "fundme/profit-split"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Solana & On-Chain",
+        "groups": [
+          {
+            "group": "Solana & On-Chain",
+            "pages": [
+              "solana/overview",
+              "solana/rank-sbt",
+              "solana/badge-nfts",
+              "solana/vaults"
             ]
           }
         ]
@@ -71,52 +94,30 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Twitter",
+          "icon": "twitter",
+          "href": "https://twitter.com/pikerio"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Discord",
+          "icon": "discord",
+          "href": "https://discord.gg/piker"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
+    
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Start Playing",
+      "href": "https://piker.io"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://twitter.com/piker_io",
+      "discord": "https://discord.gg/piker"
     }
   }
 }

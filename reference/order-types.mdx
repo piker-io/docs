@@ -1,0 +1,96 @@
+---
+title: Order Types
+description: Every order type supported on Piker, with examples
+---
+
+Piker supports five order types. They work the same way in both Rookie and Pro Mode — the only difference is whether the capital backing them is virtual or real.
+
+## Order types at a glance
+
+| Type | Trigger | Use case |
+|------|---------|----------|
+| Market | Immediate | Enter or exit a position right now at best available price |
+| Limit | Price reaches your level | Buy lower, sell higher — better entry than market |
+| Stop Loss | Price moves against you past a threshold | Cap your downside on an open position |
+| Take Profit | Price hits your profit target | Lock in gains without watching the chart |
+| Trailing Stop | Price reverses by a set distance from its favourable peak | Ride a trend and exit on reversal |
+
+## Market
+
+<AccordionGroup>
+  <Accordion title="How it works">
+    A market order executes immediately at the best available price on the composite feed. You get filled now — no waiting.
+  </Accordion>
+  <Accordion title="When to use it">
+    When speed matters more than the exact price. News-driven entries, fast exits when a thesis breaks, small positions where spread is negligible.
+  </Accordion>
+  <Accordion title="Cost">
+    Charged the 0.06% taker fee. Large orders incur simulated slippage based on real order book depth.
+  </Accordion>
+</AccordionGroup>
+
+## Limit
+
+<AccordionGroup>
+  <Accordion title="How it works">
+    You specify the price you want. The order sits on the book until price reaches your level, then fills. If price never touches your level, the order never executes.
+  </Accordion>
+  <Accordion title="When to use it">
+    When you have a view on a better entry than current price. Buying support, selling resistance, laddering into positions without chasing.
+  </Accordion>
+  <Accordion title="Cost">
+    Charged the 0.02% maker fee — cheaper than market orders because you're adding liquidity, not taking it.
+  </Accordion>
+</AccordionGroup>
+
+## Stop Loss
+
+<AccordionGroup>
+  <Accordion title="How it works">
+    A stop loss becomes a market order when price moves against you past your specified level. For a long position, this is below entry. For a short, above.
+  </Accordion>
+  <Accordion title="When to use it">
+    On every position. A predefined exit is the single most effective risk management tool in trading. Attach one when you open the position so you're not making the decision under pressure.
+  </Accordion>
+  <Accordion title="Attachment">
+    Stop losses can be attached at order entry or added to an open position at any time from the positions tab.
+  </Accordion>
+</AccordionGroup>
+
+## Take Profit
+
+<AccordionGroup>
+  <Accordion title="How it works">
+    A take profit becomes a market order when price hits your profit target. Closes the position and locks in gains.
+  </Accordion>
+  <Accordion title="When to use it">
+    When you have a clear exit target — a resistance level, a percentage gain, a round number. Prevents you from giving back gains by hesitating.
+  </Accordion>
+  <Accordion title="Partial take profits">
+    You can set multiple take-profit levels that close a percentage of the position at each level, letting you scale out of winners.
+  </Accordion>
+</AccordionGroup>
+
+## Trailing Stop
+
+<AccordionGroup>
+  <Accordion title="How it works">
+    A trailing stop is a dynamic stop loss. It follows price as it moves in your favour, staying a set distance behind. When price reverses by that distance, the stop triggers.
+  </Accordion>
+  <Accordion title="When to use it">
+    When you want to ride a trend without a fixed exit price. The trail distance determines how much reversal you tolerate before exiting.
+  </Accordion>
+  <Accordion title="Configuration">
+    Set the trail distance as either an absolute price or a percentage. Percentage trails scale with price — typically better for volatile assets.
+  </Accordion>
+</AccordionGroup>
+
+## Combining order types
+
+<Tip>
+  The most common professional setup: a limit order for entry, a stop loss for risk, and a take profit for the target — all placed together. Once live, walk away. The orders manage the trade.
+</Tip>
+
+<Warning>
+  In Rookie Mode, any open orders and positions are auto-closed at 23:59 UTC. A perfectly-placed limit order that would have filled at 23:58 UTC and triggered a take profit Tuesday morning will close as a market order Monday night.
+</Warning>

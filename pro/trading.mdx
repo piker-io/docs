@@ -1,0 +1,34 @@
+---
+title: Trading in Pro Mode
+description: The full Binance-style trading interface for Pro Mode
+---
+
+Pro Mode uses the same trading interface as Rookie Mode with several important additions designed for real-capital trading.
+
+## What's different from Rookie
+
+<AccordionGroup>
+  <Accordion title="No capital constraint bar">
+    Instead of the $100 daily capital indicator, Pro Mode shows your full portfolio balance and all-time P&L in the top right of the trading interface.
+  </Accordion>
+  <Accordion title="Piker Score impact indicator">
+    A quiet line below the leverage slider shows when your current order size is likely to affect your Sharpe ratio or drawdown score: *"Large position may affect your Sharpe."* This only appears when leverage is above 10x.
+  </Accordion>
+  <Accordion title="Leaderboard mini widget">
+    A collapsible strip above the order book shows your current rank vs the #1 trader. Always one glance away from knowing where you stand.
+  </Accordion>
+  <Accordion title="Funding rate prominence">
+    Funding rate is displayed prominently in the price ticker. In Pro Mode it directly affects your real P&L and your Sharpe ratio score.
+  </Accordion>
+  <Accordion title="Liquidation price in red">
+    When a position approaches its liquidation price, the liquidation figure in the positions tab turns red. A notification is also triggered.
+  </Accordion>
+</AccordionGroup>
+
+## Same pairs, same leverage tiers
+
+Pro Mode supports the same 20 pairs with the same leverage caps as Rookie Mode. The caps exist for the same reason — to keep the simulation realistic and the scoring system meaningful.
+
+## Trading with backed capital
+
+If you have Fund Me enabled and backers have deployed capital, that capital appears in your portfolio alongside your own. You trade it the same way — the profit split happens automatically at the end of each week via the Solana smart contract.

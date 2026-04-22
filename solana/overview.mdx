@@ -1,0 +1,37 @@
+---
+title: Overview
+description: Why Piker is built on Solana and what that means for you
+---
+
+Piker uses Solana to make your trading reputation permanently verifiable. Your rank, your badges, and your funded vaults are not just numbers in a database — they're on-chain records that anyone can verify independently.
+
+## Why Solana
+
+<CardGroup cols={3}>
+  <Card title="Speed" icon="bolt">
+    Sub-second transaction finality. Badge mints, rank updates, and vault distributions happen in real time without delays or high fees.
+  </Card>
+  <Card title="Cost" icon="tag">
+    Compressed NFTs (cNFTs) on Solana cost fractions of a cent to mint. Issuing thousands of badge NFTs is economically viable at scale.
+  </Card>
+  <Card title="Transparency" icon="eye">
+    Every on-chain record is publicly verifiable on Solscan. No Piker employee can alter your rank history, badge record, or vault balance.
+  </Card>
+</CardGroup>
+
+## What's on-chain
+
+| Item | On-chain format | When it's created |
+|------|----------------|------------------|
+| Rank SBT | Non-transferable token | When your Pro tier is assigned or updated |
+| Rookie badges | Compressed NFT (cNFT) | When you earn a qualifying Rookie badge |
+| Pro badges | Compressed NFT (cNFT) | When you earn a Pro badge |
+| Fund Me vaults | Smart contract | When a backer deploys capital |
+
+## Supported wallets
+
+- Phantom
+- Backpack
+- Solflare
+
+You can use Piker without a Solana wallet (email and Google sign-up work fine), but connecting a wallet enables on-chain features — badge NFTs go to your wallet, rank SBTs are verifiable, and Fund Me requires a wallet for USDC transactions.
