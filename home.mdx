@@ -1,0 +1,191 @@
+---
+title: "Home"
+description: "The free-to-play platform to play every financial market"
+mode: "custom"
+---
+
+{/* ===== HERO ===== */}
+<div className="relative overflow-hidden">
+  <div className="absolute inset-0 -z-10">
+    <img
+      className="w-full h-full object-cover opacity-60 block dark:hidden"
+      src="/images/hero-bg-light.png"
+      alt=""
+    />
+    <img
+      className="w-full h-full object-cover opacity-60 hidden dark:block"
+      src="/images/hero-bg.png"
+      alt=""
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white dark:to-[#07070a]" />
+  </div>
+
+  <div className="relative text-center px-6 pt-24 pb-20 max-w-4xl mx-auto">
+    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 text-gray-900 dark:text-white">
+      Trade with Piker
+    </h1>
+    <p className="text-base md:text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-14 leading-relaxed">
+      Piker is a free-to-play competitive trading platform. Trade crypto with virtual capital, climb a real leaderboard, and earn the right to trade with real community-backed money.
+    </p>
+
+    <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
+      <a
+        href="/guide/rookie/overview"
+        className="group block p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-[#A0A0C8] transition-colors bg-white/60 dark:bg-gray-950/60 backdrop-blur"
+      >
+        <div className="flex items-center gap-3 mb-2">
+          <h3 className="text-xl font-bold m-0 text-gray-900 dark:text-white">Rookie Mode</h3>
+          <span className="text-xs px-2 py-0.5 rounded-full bg-[#A0A0C8]/15 text-[#A0A0C8] font-medium">Free</span>
+        </div>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">
+          $100 of virtual capital every day. Daily leaderboard.
+        </p>
+        <span className="text-sm font-medium text-[#A0A0C8]">Get Started →</span>
+      </a>
+
+      <a
+        href="/pro/overview"
+        className="group block p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-[#C8A840] transition-colors bg-white/60 dark:bg-gray-950/60 backdrop-blur"
+      >
+        <div className="flex items-center gap-3 mb-2">
+          <h3 className="text-xl font-bold m-0 text-gray-900 dark:text-white">Pro Mode</h3>
+          <span className="text-xs px-2 py-0.5 rounded-full bg-[#C8A840]/15 text-[#C8A840] font-medium">Live</span>
+        </div>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">
+          Real capital. Ongoing ranked competition.
+        </p>
+        <span className="text-sm font-medium text-[#C8A840]">Get Started →</span>
+      </a>
+    </div>
+
+    <a
+      href="/guide/quickstart"
+      className="inline-block mt-10 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+    >
+      First trade in 90 seconds →
+    </a>
+  </div>
+</div>
+
+{/* ===== WHY PIKER? ===== */}
+<div className="max-w-6xl mx-auto px-6 py-10">
+  <div className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50/60 dark:bg-gray-900/40 p-6 md:p-10">
+    <p className="text-sm text-gray-500 dark:text-gray-400 mb-8">Why Piker?</p>
+    <div className="grid md:grid-cols-3 gap-5">
+      <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+        <div className="w-12 h-12 rounded-xl bg-[#A0A0C8]/15 flex items-center justify-center mb-6">
+          <Icon icon="lock-open" color="#A0A0C8" size={22} />
+        </div>
+        <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Free Forever</h3>
+        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+          No evaluation fees. No subscriptions. No pay-to-fail loops. The barrier to proving your skill is zero.
+        </p>
+      </div>
+
+      <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+        <div className="w-12 h-12 rounded-xl bg-[#A0A0C8]/15 flex items-center justify-center mb-6">
+          <Icon icon="ranking-star" color="#A0A0C8" size={22} />
+        </div>
+        <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Real Competition</h3>
+        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+          A live leaderboard that updates in real time. Streaks, badges, tiers — your rank is your reputation.
+        </p>
+      </div>
+
+      <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+        <div className="w-12 h-12 rounded-xl bg-[#C8A840]/15 flex items-center justify-center mb-6">
+          <Icon icon="shield-halved" color="#C8A840" size={22} />
+        </div>
+        <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Verifiable on Solana</h3>
+        <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed m-0">
+          Every rank, badge, and vault is recorded on-chain. Your track record is permanent and publicly verifiable.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* ===== GETTING STARTED ===== */}
+<div className="max-w-6xl mx-auto px-6 pt-6 pb-4">
+  <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">Getting Started</p>
+  <p className="text-sm text-gray-400 dark:text-gray-500 mb-5">Short guides to get you trading in minutes:</p>
+  <div className="grid md:grid-cols-2 gap-4">
+    <a
+      href="/guide/quickstart"
+      className="block p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-[#A0A0C8] transition-colors bg-white dark:bg-gray-950"
+    >
+      <Icon icon="rocket" color="#A0A0C8" size={22} />
+      <h3 className="text-lg font-bold mt-5 mb-2 text-gray-900 dark:text-white">Quickstart</h3>
+      <p className="text-sm text-gray-500 dark:text-gray-400 m-0">
+        Sign up and place your first trade in under 90 seconds
+      </p>
+    </a>
+
+    <a
+      href="/guide/two-modes"
+      className="block p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-[#A0A0C8] transition-colors bg-white dark:bg-gray-950"
+    >
+      <Icon icon="code-branch" color="#A0A0C8" size={22} />
+      <h3 className="text-lg font-bold mt-5 mb-2 text-gray-900 dark:text-white">Rookie vs Pro</h3>
+      <p className="text-sm text-gray-500 dark:text-gray-400 m-0">
+        Understand the two modes and how they work together
+      </p>
+    </a>
+  </div>
+</div>
+
+{/* ===== GO DEEPER ===== */}
+<div className="max-w-6xl mx-auto px-6 pt-6 pb-10">
+  <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">Go deeper</p>
+  <p className="text-sm text-gray-400 dark:text-gray-500 mb-5">Learn what powers the leaderboard and community funding:</p>
+  <div className="grid md:grid-cols-2 gap-4">
+    <a
+      href="/pro/piker-score"
+      className="block p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-[#C8A840] transition-colors bg-white dark:bg-gray-950"
+    >
+      <Icon icon="chart-line" color="#C8A840" size={22} />
+      <h3 className="text-lg font-bold mt-5 mb-2 text-gray-900 dark:text-white">Piker Score</h3>
+      <p className="text-sm text-gray-500 dark:text-gray-400 m-0">
+        The composite ranking across ROI, Sharpe, drawdown, consistency, and activity
+      </p>
+    </a>
+
+    <a
+      href="/fundme/overview"
+      className="block p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-[#C8A840] transition-colors bg-white dark:bg-gray-950"
+    >
+      <Icon icon="hand-holding-dollar" color="#C8A840" size={22} />
+      <h3 className="text-lg font-bold mt-5 mb-2 text-gray-900 dark:text-white">Fund Me</h3>
+      <p className="text-sm text-gray-500 dark:text-gray-400 m-0">
+        Get backed by the community and keep 80% of your profits
+      </p>
+    </a>
+  </div>
+</div>
+
+{/* ===== COMMUNITY ===== */}
+<div className="max-w-6xl mx-auto px-6 pb-16">
+  <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
+    <a
+      href="https://discord.gg/piker"
+      className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+    >
+      <Icon icon="discord" size={20} />
+      <span className="text-sm font-medium">Discord</span>
+    </a>
+    <a
+      href="https://twitter.com/pikerio"
+      className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+    >
+      <Icon icon="twitter" size={20} />
+      <span className="text-sm font-medium">Twitter</span>
+    </a>
+    <a
+      href="/reference/faq"
+      className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+    >
+      <Icon icon="circle-question" size={20} />
+      <span className="text-sm font-medium">FAQ</span>
+    </a>
+  </div>
+</div>

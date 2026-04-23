@@ -7,6 +7,7 @@
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
+  "backgroundImage": "/images/hero-bg.png",
   "colors": {
     "primary": "#A0A0C8",
     "light": "#C8A840",
@@ -14,6 +15,10 @@
   },
   "navigation": {
     "tabs": [
+      {
+        "tab": "Home",
+        "pages": ["home"]
+      },
       {
         "tab": "User Guide",
         "groups": [
@@ -96,7 +101,7 @@
         {
           "anchor": "Twitter",
           "icon": "twitter",
-          "href": "https://twitter.com/pikerio"
+          "href": "https://twitter.com/piker_io"
         },
         {
           "anchor": "Discord",
@@ -107,11 +112,20 @@
     }
   },
   "navbar": {
-    
+    "links": [
+      {
+        "label": "Home",
+        "href": "/home"
+      },
+      {
+        "label": "App",
+        "href": "https://piker.io"
+      }
+    ],
     "primary": {
       "type": "button",
       "label": "Start Playing",
-      "href": "https://piker.io"
+      "href": "https://piker.io/signup"
     }
   },
   "footer": {
