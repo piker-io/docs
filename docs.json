@@ -68,15 +68,15 @@
         ]
       },
       {
-        "tab": "Fund Me",
+        "tab": "Vaults",
         "groups": [
           {
-            "group": "Fund Me",
+            "group": "Vaults",
             "pages": [
-              "fundme/overview",
-              "fundme/for-traders",
-              "fundme/for-backers",
-              "fundme/profit-split"
+              "vaults/overview",
+              "vaults/for-traders",
+              "vaults/for-backers",
+              "vaults/profit-split"
             ]
           }
         ]
@@ -113,10 +113,6 @@
   },
   "navbar": {
     "links": [
-      {
-        "label": "Home",
-        "href": "/home"
-      },
       {
         "label": "App",
         "href": "https://piker.io"
